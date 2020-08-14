@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="">
+  <style>
+    body {
+      font-family: "HelveticaMonospacedW06-Rg";
+      line-height: 1.5;
+      background-color: #000;
+      color: #fff;
+    }
+
+    #demo {
+      font-size: 32px;
+      position: absolute;
+      bottom: 8px;
+      left: 8px;
+    }
+  </style>
+</head>
+<body onload="typeWriter()">
+  Hello, world!<br />
+  sharing ecosystem<br />
+
+  <span id="demo"></span>
+
+  <script>
+    var i = 0;
+    var txt = '#hayuksyering';
+    var speed = 100;
+
+    function typeWriter() {
+      if (i < txt.length) {
+        document.getElementById("demo").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+  </script>
+</body>
+</html>
